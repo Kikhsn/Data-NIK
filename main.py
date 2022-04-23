@@ -271,6 +271,7 @@ while True:
             while True:
                 halaman_baru()
                 display_url_as_qr(f"SMSTO:4444:{data['nik']}#{data['kk']}#")
+                # display_url_as_qr(f"{data['nik']} {data['kk']}")
                 print(f"{info} NIK    : {data['nik']}")
                 print(f"{info} KK     : {data['kk']}")
                 print(f"{info} STATUS : {data['status']}")
@@ -283,7 +284,7 @@ while True:
                 try:
                     sub_menu = int(input(f"\n{asking} Masukkan Menu Yang Dipilih: {Y}"))
                 except ValueError:
-                    continue
+                    sub_menu = 1
                 
                 if sub_menu == 0:
                     break
